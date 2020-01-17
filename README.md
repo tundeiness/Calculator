@@ -22,4 +22,4 @@ them to build a simple product that would assist them with their calculations.
 ![Calculator Screenshot](https://github.com/microverseinc/project-react-calculator/blob/master/images/calculator.png?raw=true)
 
 
-react2020-calculator.herokuapp.com
+<!-- react2020-calculator.herokuapp.com -->
