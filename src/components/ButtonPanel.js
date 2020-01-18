@@ -1,9 +1,11 @@
+/* eslint-disable react/jsx-filename-extension */
 import React from 'react';
 import Button from './Button';
-class ButtonPanel extends React.Component{
-  render(){
-    return(
-        <Button onClick={this.onClick}/>
+
+class ButtonPanel extends React.Component {
+  render() {
+    return (
+      <Button onClick={this.onClick} />
     );
   }
 }
