@@ -8,7 +8,7 @@ function Button(props){
           <button name='AC' onClick={e=> props.onClick(e.target.name)} className="tierOne" data-action="clear">AC</button>
           <button name='+/-' onClick={e=> props.onClick(e.target.name)} className="tierOne" data-action="plus_minus">+/-</button>
           <button name='%' onClick={e=> props.onClick(e.target.name)} className="tierOne" data-action="percent">%</button>
-          <button name='/' onClick={e=> props.onClick(e.target.name)} class="key--operator" data-action="divide">÷</button>
+          <button name='/' onClick={e=> props.onClick(e.target.name)} className="key--operator" data-action="divide">÷</button>
         </div>
         <div className="groupTwo">
           <button name='7' onClick={e=> props.onClick(e.target.name)} className="tierOne">7</button>
