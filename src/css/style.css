@@ -64,16 +64,22 @@
    margin-top: 1%;
  }
 
- .groupOne{
+ .groupOne, .groupTwo, .groupThree, .groupFour, .groupFive{
   border: 1px solid green;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
  }
 
  .tierOne{
 
+
  }
 
  .tierTwo{
-
+  height: 4rem;
+  width: 50%;
   }
 
  .key--operator{
@@ -85,7 +91,8 @@
  }
 
  .tierOne, .key--operator, .key--equal{
-
+  height: 4rem;
+  width: 25%;
  }
 
 
