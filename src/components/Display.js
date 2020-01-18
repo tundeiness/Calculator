@@ -5,8 +5,7 @@
 import React from 'react';
 
 
-// eslint-disable-next-line space-before-blocks
-class Display extends React.Component{
+class Display extends React.Component {
   render() {
     return (
       <div className="calculator__display">
