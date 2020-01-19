@@ -5,7 +5,7 @@
 import React from 'react';
 
 
-function Button(props){
+const Button = (props) =>{
   return (
     <div className="calculator_button">
       <div className="groupOne">
