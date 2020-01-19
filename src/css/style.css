@@ -25,6 +25,7 @@
   margin: 8em auto;
   text-align: center;
   display: flex;
+  flex-direction: column;
   width: 700px;
  }
 
@@ -61,7 +62,8 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  margin-top: .1rem;
+  /* margin-top: .1rem; */
+  /* height: 100px; */
  }
 
  .groupFive{
@@ -69,7 +71,7 @@
   }
 
  .tierTwo{
-  height: 4rem;
+  /* height: 4rem; */
   width: 49%;
   }
 
@@ -80,10 +82,14 @@
  }
 
  .tierOne, .key--operator, .key--equal{
-  height: 4rem;
+  /* height: 4rem; */
   width: 24.5%;
   border-radius: 1%;
   margin-left: .1rem;
+ }
+
+ .tierOne, .tierTwo, .key--operator, .key--equal{
+  height: 100px;
  }
 
  .tierOne, .tierTwo{
