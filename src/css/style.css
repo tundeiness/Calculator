@@ -81,8 +81,13 @@
  }
 
  .tierOne, .tierTwo, .key--operator, .key--equal{
-    font-size: 1rem;
-    font-weight: bolder;
+    /* font-size: 1rem;
+    font-weight: bolder; */
+ }
+
+ button{
+  font-size: 1.2rem;
+  font-weight: bolder;
  }
 
 
