@@ -5,7 +5,7 @@
 import React from 'react';
 
 
-const Button = (props) => (
+const Button = () => (
   <div className="calculator_button">
     <div className="groupOne">
       <button name="AC" className="tierOne" id="clear">AC</button>
