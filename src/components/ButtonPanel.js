@@ -6,7 +6,8 @@ class ButtonPanel extends React.Component {
   constructor(props) {
   	super(props);
   	this.state = {
-  		colour: '#FBAB7E'
+      colour: '#FBAB7E',
+      wide:false
   	}
   	this.updateColour = this.updateColour.bind(this);
   }
@@ -16,6 +17,13 @@ class ButtonPanel extends React.Component {
   		colour: 'red'
   	});
   }
+
+  isWide() {
+  	this.setState({
+  		wide: true
+  	});
+  }
+
   render() {
     return (
       <Button color = {this.state.colour} updateColour={this.updateColour} onClick={this.onClick} />
