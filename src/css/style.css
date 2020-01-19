@@ -44,10 +44,12 @@
   background-color: grey;
   display: flex;
   justify-content: flex-end;
+  align-items: flex-end;
  }
 
  p{
   color: white;
+  padding-right: .5rem;
  }
 
  .calculator_button{
