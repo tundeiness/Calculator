@@ -71,7 +71,6 @@
   }
 
  .tierTwo{
-  /* height: 4rem; */
   width: 49%;
   }
 
@@ -82,7 +81,6 @@
  }
 
  .tierOne, .key--operator, .key--equal{
-  /* height: 4rem; */
   width: 24.5%;
   border-radius: 1%;
   margin-left: .1rem;
@@ -102,10 +100,6 @@
     cursor: pointer;
  }
 
- .tierOne, .tierTwo, .key--operator, .key--equal{
-    /* font-size: 1rem;
-    font-weight: bolder; */
- }
 
  button{
   font-size: 1.2rem;
