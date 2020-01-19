@@ -43,11 +43,12 @@
   /* background-color: rgba(0,0,255, 0.1); */
   background-color: grey;
   display: flex;
+  justify-content: flex-end;
  }
 
- /* p{
-  text-align: right;
- } */
+ p{
+  color: white;
+ }
 
  .calculator_button{
    margin-top: 1%;
