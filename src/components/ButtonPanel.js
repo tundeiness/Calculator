@@ -2,6 +2,12 @@
 import React from 'react';
 import Button from './Button';
 
+
+const styles = {
+  fontFamily: "sans-serif",
+  textAlign: "center"
+};
+
 class ButtonPanel extends React.Component {
   constructor(props) {
   	super(props);
@@ -9,8 +15,22 @@ class ButtonPanel extends React.Component {
       colour: '#FBAB7E',
       wide:false
   	}
-  	this.updateColour = this.updateColour.bind(this);
+  	// this.updateColour = this.updateColour.bind(this);
   }
+
+  componentDidMount(){
+    this.updateColour();
+    this.isWide();
+  }
+
+  // updateClock() {
+  //   this.timerId = setTimeout(() => {
+  //     this.setState({
+  //       time: new Date()
+  //     // reset the timeout after state updates
+  //     }, this.updateClock)
+  //   }, 1000)
+  // }
 
   updateColour() {
   	this.setState({
@@ -26,7 +46,7 @@ class ButtonPanel extends React.Component {
 
   render() {
     return (
-      <Button color = {this.state.colour} updateColour={this.updateColour} onClick={this.onClick} />
+      <Button style={styles} color = {this.state.colour} updateColour={this.updateColour} onClick={this.onClick} />
     );
   }
 }
