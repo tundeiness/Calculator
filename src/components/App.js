@@ -8,14 +8,14 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      childDisplay: '0',
+      result: '0',
     };
   }
 
   render() {
     return (
       <div className="app-wrapper">
-        <Display childDisplay={this.state.childDisplay} />
+        <Display result={this.state.result} />
         <ButtonPanel />
       </div>
     );

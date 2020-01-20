@@ -1,7 +1,4 @@
 /* eslint-disable react/prop-types */
-/* eslint-disable react/button-has-type */
-/* eslint-disable react/jsx-filename-extension */
-/* eslint-disable space-before-blocks */
 import React from 'react';
 
 
