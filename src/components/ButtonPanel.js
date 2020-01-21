@@ -1,24 +1,26 @@
-/* eslint-disable react/jsx-filename-extension */
+/* eslint-disable max-len */
+/* eslint-disable react/no-unused-state */
+
 import React from 'react';
 import Button from './Button';
 
 
 const styles = {
-  fontFamily: "sans-serif",
-  textAlign: "center"
+  fontFamily: 'sans-serif',
+  textAlign: 'center',
 };
 
 class ButtonPanel extends React.Component {
   constructor(props) {
-  	super(props);
-  	this.state = {
+    super(props);
+    this.state = {
       colour: '#FBAB7E',
-      wide:false
-  	}
-  	// this.updateColour = this.updateColour.bind(this);
+      wide: false,
+    };
+    // this.updateColour = this.updateColour.bind(this);
   }
 
-  componentDidMount(){
+  componentDidMount() {
     this.updateColour();
     this.isWide();
   }
@@ -33,20 +35,21 @@ class ButtonPanel extends React.Component {
   // }
 
   updateColour() {
-  	this.setState({
-  		colour: 'red'
-  	});
+    this.setState({
+      colour: 'red',
+    });
   }
 
   isWide() {
-  	this.setState({
-  		wide: true
-  	});
+    this.setState({
+      wide: true,
+    });
   }
 
   render() {
+    const { color } = this.state;
     return (
-      <Button style={styles} color = {this.state.colour} updateColour={this.updateColour} onClick={this.onClick} />
+      <Button style={styles} color={color} updateColour={this.updateColour} onClick={this.onClick} />
     );
   }
 }
