@@ -30,14 +30,8 @@
         "no-param-reassign": "off",
         "eol-last": "off",
         "arrow-parens": "off",
+        "import/no-unresolved": "off",
         "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }]
       },
 
-      "settings": {
-        "import/resolver": {
-          "node": {
-            "paths": ["src"]
-          }
-        }
-      }
 }
