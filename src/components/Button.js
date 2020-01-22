@@ -1,17 +1,6 @@
 
-/* eslint-disable max-len */
-/* eslint-disable react/no-unused-state */
-
 import React from 'react';
 import { PropTypes } from 'prop-types';
-// import Button from './ButtonPanel';
-
-
-// const styles = {
-//   fontFamily: 'sans-serif',
-//   textAlign: 'center',
-//   width: '2rem',
-// };
 
 
 const Button = (props) => {
@@ -36,9 +25,6 @@ const Button = (props) => {
   );
 };
 
-// style={{ color: '#FBAB7E' }} style={{backgroundColor: "lightblue"}}
-
-// color: #d9d9d9;
 
 Button.propTypes = {
   name: PropTypes.string,
