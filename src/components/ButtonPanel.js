@@ -3,6 +3,8 @@
 
 import React from 'react';
 import Button from './Button';
+import { PropTypes } from 'prop-types';
+
 
 
 const styles = {
@@ -10,48 +12,31 @@ const styles = {
   textAlign: 'center',
 };
 
-class ButtonPanel extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      colour: '#FBAB7E',
-      wide: false,
-    };
-    // this.updateColour = this.updateColour.bind(this);
-  }
-
-  componentDidMount() {
-    this.updateColour();
-    this.isWide();
-  }
-
-  // updateClock() {
-  //   this.timerId = setTimeout(() => {
-  //     this.setState({
-  //       time: new Date()
-  //     // reset the timeout after state updates
-  //     }, this.updateClock)
-  //   }, 1000)
-  // }
-
-  updateColour() {
-    this.setState({
-      colour: 'red',
-    });
-  }
-
-  isWide() {
-    this.setState({
-      wide: true,
-    });
-  }
+const ButtonPanel = ({name, color, wide}) =>{
 
   render() {
     const { color } = this.state;
+    // const { wide } = this.state;
     return (
-      <Button style={styles} color={color} updateColour={this.updateColour} onClick={this.onClick} />
+      <Button style={styles} color={color} updateColour={this.updateColour} onClick={this.onClick}>{name}</Button>
     );
   }
+
 }
+
+
+ButtonPanel.propTypes = {
+  name: PropTypes.string,
+  color: PropTypes.string,
+  wide: PropTypes.bool,
+}
+
+ButtonPanel.defaultProps = {
+  name: 'name',
+  color: '#FBAB7E',
+  wide:false
+}
+
+
 
 export default ButtonPanel;
