@@ -36,7 +36,7 @@ const Button = (props) => {
 
 
 Button.propTypes = {
-  name: PropTypes.string,
+  name: PropTypes.string.isRequired,
   color: PropTypes.string,
   wide: PropTypes.bool,
 };
@@ -44,7 +44,6 @@ Button.propTypes = {
 Button.defaultProps = {
   color: '#d9d9d9',
   wide: false,
-  name: 'name',
 };
 
 
