@@ -60,6 +60,7 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  height: 100px;
  }
 
  .groupFive{
@@ -78,7 +79,6 @@
   }
 
 
-
   .tierOne, .key--operator, .key--equal{
     background-color: #d9d9d9;
     background-image: linear-gradient(315deg, #d9d9d9 0%, #f6f2f2 74%);
@@ -90,32 +90,12 @@
   }
 
 
-
- .tierTwo{
-  /* width: 49%; */
-  }
-
  .key--operator, .key--equal{
   background-color: #FBAB7E;
   background-image: linear-gradient(315deg, #FBAB7E 0%, #F7CE68 74%);
   border: 1px solid #FBAB7E;
  }
 
- .tierOne, .key--operator, .key--equal{
-  /* width: 24.5%;
-  border-radius: 1%;
-  margin-left: .1rem; */
- }
-
- .tierOne, .tierTwo, .key--operator, .key--equal{
-  /* height: 100px; */
- }
-
- .tierOne, .tierTwo{
-   /* background-color: #d9d9d9;
-   background-image: linear-gradient(315deg, #d9d9d9 0%, #f6f2f2 74%);
-   border: 1px solid gray; */
- }
 
  .tierOne, .key--operator, .key--equal:hover{
     cursor: pointer;

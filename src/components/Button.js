@@ -6,13 +6,24 @@ import { PropTypes } from 'prop-types';
 const Button = (props) => {
   const { name, color, wide } = props;
 
-  let styling = 'tierOne tierTwo';
+  let styling = 'tierOne';
+  const styles = {
+    backgroundColor: '#FBAB7E',
+    width: '24.9%',
+    height: '100px',
+    border: '1px solid gray',
+    backgroundImage: 'linear-gradient(315deg, #FBAB7E 0%, #F7CE68 74%)',
+    cursor: 'pointer',
+  };
 
-  if (color !== '#FBAB7E') {
-    styling = 'tierOne';
-  } else {
-    styling = 'key--operator key--equal';
+  let condit;
+  if (name === 'x' || name === '-' || name === '+' || name === '÷' || name === '=') {
+    if (color !== '#FBAB7E') {
+      condit = <button type="button" style={styles}>{name}</button>;
+      return condit;
+    }
   }
+
 
   if (wide === true) {
     styling = 'zero';
