@@ -1,7 +1,7 @@
 
 const Big = require('big.js');
 
-const operate = () => {
+const operate = (numOne, numTwo, operation) => {
 
 };
 
