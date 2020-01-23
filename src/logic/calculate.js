@@ -1,3 +1,6 @@
+
+import operate from './operate';
+
 const Calculate = (dataInput, buttonName) => {
   const { total, next, operation } = dataInput;
   let copy = { total, next, operation };

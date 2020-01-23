@@ -9,7 +9,7 @@ const ButtonPanel = () => (
       <Button aria-label="AC" name="AC" className="tierOne" />
       <Button aria-label="+/-" name="+/-" className="tierOne" />
       <Button aria-label="%" name="%" className="tierOne" />
-      <Button aria-label="/" name="÷" className="key--operator" id="divide" />
+      <Button aria-label="/" name="/" className="key--operator" id="divide" />
     </div>
     <div className="groupTwo">
       <Button aria-label="7" name="7" className="tierOne" />
