@@ -1,7 +1,7 @@
 
 import operate from './operate';
 
-function Calculate(dataInput, buttonName) {
+function calculate(dataInput, buttonName) {
   let { total, next, operation } = dataInput;
 
   if (buttonName === '+/-') {
@@ -20,4 +20,4 @@ function Calculate(dataInput, buttonName) {
   return res;
 }
 
-export default Calculate;
+export default calculate;
