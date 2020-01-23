@@ -30,7 +30,7 @@ const ButtonPanel = () => (
       <Button aria-label="+" name="+" className="key--operator" id="plus" />
     </div>
     <div className="groupFive">
-      <Button aria-label="0" name="0" className="tierTwo" color="#d9d9d9" wide />
+      <Button aria-label="0" name="0" className="tierOne" color="#d9d9d9" wide />
       <Button aria-label="." name="." className="tierOne" data-action="decimal" color="#d9d9d9" />
       <Button aria-label="=" name="=" className="key--equal" id="calculate" />
     </div>

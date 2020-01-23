@@ -15,7 +15,7 @@ const Button = (props) => {
   }
 
   if (wide === true) {
-    styling = 'tierTwo';
+    styling = 'zero';
   }
 
   return (
