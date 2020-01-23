@@ -1,25 +1,23 @@
 
 import operate from './operate';
 
-const Calculate = (dataInput, buttonName) => {
-  const { total, next, operation } = dataInput;
-  let copy = { total, next, operation };
-
+function Calculate(dataInput, buttonName) {
+  let { total, next, operation } = dataInput;
 
   if (buttonName === '+/-') {
-    copy.total *= -1;
-    copy.next *= -1;
-    copy = { total, next, operation };
-    return copy;
+    total *= -1;
+    next *= -1;
+    operation = buttonName;
+    return total;
   } if (buttonName === 'AC') {
-    copy.total = 0;
-    return copy.total;
-  } if (buttonName === '.' && copy.next !== false) {
-    copy.total = [copy.total, '.', copy.next].join('');
-    return copy.total;
+    total = 0;
+    return total;
+  } if (buttonName === '.' && next !== false) {
+    total = [total, '.', next].join('');
+    return total;
   }
-  const res = operate(copy.total, copy.next, copy.operation);
-  return res && copy;
-};
+  const res = operate(total, next, operation);
+  return res;
+}
 
 export default Calculate;
