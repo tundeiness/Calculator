@@ -19,7 +19,7 @@ const Calculate = (dataInput, buttonName) => {
     return copy.total;
   }
   const res = operate(copy.total, copy.next, copy.operation);
-  return res;
+  return res && copy;
 };
 
 export default Calculate;
