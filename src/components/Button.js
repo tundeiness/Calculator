@@ -1,39 +1,50 @@
 
 import React from 'react';
+import { PropTypes } from 'prop-types';
 
 
-const Button = () => (
-  <div className="calculator_button">
-    <div className="groupOne">
-      <button type="button" name="AC" className="tierOne" id="clear">AC</button>
-      <button type="button" name="+/-" className="tierOne" id="plus_minus">+/-</button>
-      <button type="button" name="%" className="tierOne" id="percent">%</button>
-      <button type="button" name="/" className="key--operator" id="divide">÷</button>
-    </div>
-    <div className="groupTwo">
-      <button type="button" name="7" className="tierOne">7</button>
-      <button type="button" name="8" className="tierOne">8</button>
-      <button type="button" name="9" className="tierOne">9</button>
-      <button type="button" name="x" className="key--operator" id="multiply">&times;</button>
-    </div>
-    <div className="groupThree">
-      <button type="button" name="4" className="tierOne">4</button>
-      <button type="button" name="5" className="tierOne">5</button>
-      <button type="button" name="6" className="tierOne">6</button>
-      <button type="button" name="-" className="key--operator" id="minus">-</button>
-    </div>
-    <div className="groupFour">
-      <button type="button" name="1" className="tierOne">1</button>
-      <button type="button" name="2" className="tierOne">2</button>
-      <button type="button" name="3" className="tierOne">3</button>
-      <button type="button" name="+" className="key--operator" id="plus">+</button>
-    </div>
-    <div className="groupFive">
-      <button type="button" name="0" className="tierTwo">0</button>
-      <button type="button" name="." className="tierOne" data-action="decimal">.</button>
-      <button type="button" name="=" className="key--equal" id="calculate">=</button>
-    </div>
-  </div>
-);
+const Button = (props) => {
+  const { name, color, wide } = props;
+
+  let styling = 'tierOne';
+  const styles = {
+    backgroundColor: '#FBAB7E',
+    width: '24.9%',
+    height: '100px',
+    border: '1px solid gray',
+    backgroundImage: 'linear-gradient(315deg, #FBAB7E 0%, #F7CE68 74%)',
+    cursor: 'pointer',
+  };
+
+  let condit;
+  if (name === 'x' || name === '-' || name === '+' || name === '÷' || name === '=') {
+    if (color !== '#FBAB7E') {
+      condit = <button type="button" style={styles}>{name}</button>;
+      return condit;
+    }
+  }
+
+
+  if (wide === true) {
+    styling = 'zero';
+  }
+
+  return (
+    <button type="button" className={styling}>{name}</button>
+  );
+};
+
+
+Button.propTypes = {
+  name: PropTypes.string.isRequired,
+  color: PropTypes.string,
+  wide: PropTypes.bool,
+};
+
+Button.defaultProps = {
+  color: '#d9d9d9',
+  wide: false,
+};
+
 
 export default Button;
