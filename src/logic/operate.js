@@ -11,7 +11,7 @@ const operate = (numOne, numTwo, operation) => {
     return first.plus(second).toString();
   } if (operation === 'x') {
     return first.times(second).toString();
-  } if (operation === '/') {
+  } if (operation === '÷') {
     if (second === 0) {
       return "Division by 0 isn't permissible";
     }
