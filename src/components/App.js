@@ -10,6 +10,9 @@ class App extends React.Component {
     super(props);
     this.state = {
       result: '0',
+      total: null,
+      next: null,
+      operation: null,
     };
   }
 
