@@ -9,11 +9,21 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      result: '0',
       total: null,
       next: null,
       operation: null,
     };
+  }
+
+  handleClick(buttonName) {
+    const { total, next, operation } = this.state;
+    const copyObj = { total, next, operation };
+    const result = calculate(copyObj, buttonName);
+    this.setState({
+      total: result.total,
+      next: result.next,
+      operation: result.operation,
+    });
   }
 
   render() {
