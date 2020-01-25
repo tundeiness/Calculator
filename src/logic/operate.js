@@ -1,9 +1,10 @@
 
-const Big = require('big.js');
+// const Big = require('big.js');
+import Big from 'big.js';
 
 const operate = (numOne, numTwo, operation) => {
-  const first = Big(numOne);
-  const second = Big(numTwo);
+  const first = numOne ? Big(numOne) : null;
+  const second = numTwo ? Big(numTwo) : null;
 
   if (operation === '-') {
     return first.minus(second).toString();

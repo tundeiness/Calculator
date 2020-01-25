@@ -4,7 +4,12 @@ import { PropTypes } from 'prop-types';
 
 
 const Button = (props) => {
-  const { name, color, wide } = props;
+  const {
+    name, color, wide, handleClick,
+  } = props;
+
+  // const { clickHandler } = props;
+  // const handleClick = (buttonName) => clickHandler(buttonName);
 
   let styling = 'tierOne';
   const styles = {
@@ -19,7 +24,7 @@ const Button = (props) => {
   let condit;
   if (name === 'x' || name === '-' || name === '+' || name === '÷' || name === '=') {
     if (color !== '#FBAB7E') {
-      condit = <button type="button" style={styles}>{name}</button>;
+      condit = <button type="button" onClick={() => handleClick(name)} style={styles}>{name}</button>;
       return condit;
     }
   }
@@ -30,7 +35,7 @@ const Button = (props) => {
   }
 
   return (
-    <button type="button" className={styling}>{name}</button>
+    <button type="button" onClick={() => handleClick(name)} className={styling}>{name}</button>
   );
 };
 
@@ -39,6 +44,7 @@ Button.propTypes = {
   name: PropTypes.string.isRequired,
   color: PropTypes.string,
   wide: PropTypes.bool,
+  handleClick: PropTypes.func.isRequired,
 };
 
 Button.defaultProps = {

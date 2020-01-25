@@ -6,11 +6,11 @@ import Button from './Button';
 
 const ButtonPanel = (props) => {
   const { clickHandler } = props;
-  // const handleClick = (buttonName) => clickHandler(buttonName);
+  const handleClick = (buttonName) => clickHandler(buttonName);
   return (
     <div className="calculator_button">
       <div className="groupOne">
-        <Button handleClick={(buttonName) => clickHandler(buttonName)} aria-label="AC" name="AC" className="tierOne" />
+        <Button handleClick={handleClick} aria-label="AC" name="AC" className="tierOne" />
         <Button handleClick={(buttonName) => clickHandler(buttonName)} aria-label="+/-" name="+/-" className="tierOne" />
         <Button handleClick={(buttonName) => clickHandler(buttonName)} aria-label="%" name="%" className="tierOne" />
         <Button handleClick={(buttonName) => clickHandler(buttonName)} aria-label="/" name="÷" className="key--operator" id="divide" />
@@ -43,12 +43,12 @@ const ButtonPanel = (props) => {
 };
 
 ButtonPanel.propTypes = {
-  clickHandler: PropTypes.func,
+  clickHandler: PropTypes.func.isRequired,
 };
 
-ButtonPanel.defaultProps = {
-  clickHandler: () => {},
-};
+// ButtonPanel.defaultProps = {
+//   clickHandler: () => {},
+// };
 
 
 export default ButtonPanel;
