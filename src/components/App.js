@@ -29,10 +29,19 @@ class App extends React.Component {
 
   render() {
     const { total, next } = this.state;
+    const res = next || total;
+    if (res) {
+      return (
+        <div className="app-wrapper">
+          <Display result={res} />
+          <ButtonPanel clickHandler={this.handleClick} />
+        </div>
+      );
+    }
     return (
       <div className="app-wrapper">
-        <Display result={total || next} />
-        <ButtonPanel clickHandler={this.handleClick} />
+        <Display />
+        <ButtonPanel clickHandler={(buttonName) => this.handleClick(buttonName)} />
       </div>
     );
   }
