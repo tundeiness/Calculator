@@ -27,10 +27,10 @@ class App extends React.Component {
   }
 
   render() {
-    const { result } = this.state;
+    const { total, next } = this.state;
     return (
       <div className="app-wrapper">
-        <Display result={result} />
+        <Display result={total || next} />
         <ButtonPanel />
       </div>
     );
