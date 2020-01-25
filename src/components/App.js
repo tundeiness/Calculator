@@ -13,6 +13,7 @@ class App extends React.Component {
       next: null,
       operation: null,
     };
+    this.handleClick = this.handleClick.bind(this);
   }
 
   handleClick(buttonName) {
@@ -31,7 +32,7 @@ class App extends React.Component {
     return (
       <div className="app-wrapper">
         <Display result={total || next} />
-        <ButtonPanel />
+        <ButtonPanel clickHandler={this.handleClick} />
       </div>
     );
   }
