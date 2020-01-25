@@ -33,7 +33,7 @@ class App extends React.Component {
       return (
         <div className="app-wrapper">
           <Display result={res} />
-          <ButtonPanel clickHandler={this.handleClick} />
+          <ButtonPanel clickHandler={(buttonName) => this.handleClick(buttonName)} />
         </div>
       );
     }
