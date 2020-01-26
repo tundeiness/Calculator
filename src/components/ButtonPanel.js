@@ -46,9 +46,5 @@ ButtonPanel.propTypes = {
   clickHandler: PropTypes.func.isRequired,
 };
 
-// ButtonPanel.defaultProps = {
-//   clickHandler: () => {},
-// };
-
 
 export default ButtonPanel;
