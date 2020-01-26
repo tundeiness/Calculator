@@ -1,5 +1,4 @@
 
-// const Big = require('big.js');
 import Big from 'big.js';
 
 const operate = (numOne, numTwo, operation) => {
@@ -27,7 +26,7 @@ const operate = (numOne, numTwo, operation) => {
   }
 
   if (operation === '%') {
-    return first.mod(second).toString();
+    return first.div(100).toString();
   }
   return 'not permitted';
 };

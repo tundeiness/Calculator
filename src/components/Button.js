@@ -8,8 +8,6 @@ const Button = (props) => {
     name, color, wide, handleClick,
   } = props;
 
-  // const { clickHandler } = props;
-  // const handleClick = (buttonName) => clickHandler(buttonName);
 
   let styling = 'tierOne';
   const styles = {
