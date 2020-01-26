@@ -9,19 +9,27 @@ const operate = (numOne, numTwo, operation) => {
 
   if (operation === '-') {
     return first.minus(second).toString();
-  } if (operation === '+') {
+  }
+
+  if (operation === '+') {
     return first.plus(second).toString();
-  } if (operation === 'x') {
+  }
+
+  if (operation === 'x') {
     return first.times(second).toString();
-  } if (operation === '÷') {
+  }
+
+  if (operation === '÷') {
     if (second === 0) {
       return "Division by 0 isn't permissible";
     }
     return first.div(second).toString();
-  } if (operation === '%') {
+  }
+
+  if (operation === '%') {
     return first.mod(second).toString();
   }
-  return false;
+  return 'not permitted';
 };
 
 export default operate;

@@ -28,7 +28,7 @@ class App extends React.Component {
 
   render() {
     const { total, next } = this.state;
-    const res = total || next;
+    const res = next || total;
     if (res) {
       return (
         <div className="app-wrapper">
