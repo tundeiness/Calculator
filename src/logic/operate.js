@@ -6,6 +6,7 @@ const operate = (numOne, numTwo, operation) => {
   const first = numOne ? Big(numOne) : null;
   const second = numTwo ? Big(numTwo) : null;
 
+
   if (operation === '-') {
     return first.minus(second).toString();
   } if (operation === '+') {
@@ -20,7 +21,7 @@ const operate = (numOne, numTwo, operation) => {
   } if (operation === '%') {
     return first.mod(second).toString();
   }
-  return 'operation not permitted';
+  return false;
 };
 
 export default operate;
