@@ -1,6 +1,6 @@
 
 # A simple calculator built with React
-View [Demo App](https://react2020-calculator.herokuapp.com) on heroku.
+View [Demo App](https://react2020calculator.herokuapp.com/) on heroku.
 
 ## Introduction
 This project uses React to build a simple calculator.
