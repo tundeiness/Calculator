@@ -1,5 +1,5 @@
 
-import Big from 'big.js';
+import Big from 'big-js';
 
 const operate = (numOne, numTwo, operation) => {
   const first = numOne ? Big(numOne) : null;
