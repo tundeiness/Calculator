@@ -7,7 +7,7 @@ function calculate(dataInput, buttonName) {
   const numArray = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
 
   const zeroDivisionHelper = () => {
-    if (total === "Can't divide by 0") {
+    if (total === 'cannot divide by 0') {
       total = 0;
       next = 0;
       operation = 0;

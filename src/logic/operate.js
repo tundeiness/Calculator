@@ -19,10 +19,10 @@ const operate = (numOne, numTwo, operation) => {
   }
 
   if (operation === '÷') {
-    if (second === 0) {
-      return "Division by 0 isn't permissible";
-    }
-    return first.div(second).toString();
+    try {
+      first.div(second);
+      return (first.div(second).toString());
+    } catch (err) { return 'cannot divide by 0'; }
   }
 
   if (operation === '%') {
