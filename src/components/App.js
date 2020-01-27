@@ -1,4 +1,3 @@
-/* eslint-disable no-unused-vars */
 
 import React from 'react';
 import Display from './Display';
@@ -9,16 +8,31 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      result: '0',
+      total: null,
+      next: null,
+      operation: null,
     };
+    this.handleClick = this.handleClick.bind(this);
+  }
+
+  handleClick(buttonName) {
+    const { total, next, operation } = this.state;
+    const copyObj = { total, next, operation };
+    const result = calculate(copyObj, buttonName);
+    this.setState({
+      total: result.total,
+      next: result.next,
+      operation: result.operation,
+    });
   }
 
   render() {
-    const { result } = this.state;
+    const { total, next } = this.state;
+    const res = next || total;
     return (
       <div className="app-wrapper">
-        <Display result={result} />
-        <ButtonPanel />
+        <Display result={res || 0} />
+        <ButtonPanel clickHandler={(buttonName) => this.handleClick(buttonName)} />
       </div>
     );
   }
